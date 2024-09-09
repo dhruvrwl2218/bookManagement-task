@@ -1,7 +1,7 @@
-import { User } from "../../models/user.model.js";
-import { Books } from "../../models/book.model.js";
-import { Transaction } from "../../models/transaction.model.js";
-import { ApiError } from "../../utils/apiError.js";
+import { User } from "../models/user.model.js";
+import { Books } from "../models/book.model.js";
+import { Transaction } from "../models/transaction.model.js";
+import { ApiError } from "../utils/apiError.js";
 
 //this one is used to check is user and book is there or not in db while issuing the book
 export const validateUserAndBook = async (_id, bookName) => {

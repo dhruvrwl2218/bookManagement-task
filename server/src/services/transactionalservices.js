@@ -1,4 +1,4 @@
-import { Transaction } from "../../models/transaction.model.js";
+import { Transaction } from "../models/transaction.model.js";
 import {
   validateUserAndBook,
   checkBookAvailability,
@@ -6,8 +6,7 @@ import {
   getBookId,
   validateTransaction
 } from "./helper.js";
-import { ApiError } from "../../utils/apiError.js";
-
+import { ApiError } from "../utils/apiError.js";
 
 //BookIssue
 export const issueBookService = async (bookName, userId, issueDate) => {

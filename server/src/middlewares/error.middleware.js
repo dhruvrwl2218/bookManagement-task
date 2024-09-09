@@ -5,7 +5,7 @@ const errorHandler = (err, req, res, next) => {
   if (err instanceof ApiError) {
     return res.status(err.statusCode).json({
       success: false,
-      message: err.message || 'An error occurred',
+      message: err.message,
       errors: err.errors || [],
       stack: process.env.NODE_ENV === 'production' ? undefined : err.stack, // Hide stack in production
     });

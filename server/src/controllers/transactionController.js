@@ -8,7 +8,7 @@ import {
   getTotalRentByBookService,
   getUserIssuedBooksService,
   getTransactionsByDateRange,
-} from "../services/transactionalService/transactionalservices.js";
+} from "../services/transactionalservices.js";
 
 //issueTransaction
 export const issueBook = asyncHandler(async (req, res, next) => {

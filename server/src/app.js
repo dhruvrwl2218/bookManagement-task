@@ -16,9 +16,6 @@ app.use(cors({
 app.use(express.json())
 app.use(errorHandler);
 
-app.get('/',(req,res)=>{
-    res.status(200).json('haan bhai request praapt hogyi hai')
-})
 app.use('/api/v1/user',userRouter);
 app.use('/api/v1/books',bookRouter);
 app.use('/api/v1/transaction',transactionRouter);

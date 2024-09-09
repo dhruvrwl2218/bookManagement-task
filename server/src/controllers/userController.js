@@ -16,17 +16,17 @@ export const allUsers = asyncHandler(async(req,res,next)=>{
     }
 
 })
-export const addUser = asyncHandler(async(req,res,next)=>{
-    try {
-      const body = req.body;
+// export const addUser = asyncHandler(async(req,res,next)=>{
+  //   try {
+  //     const body = req.body;
       
-      const newbook = new User({
-        userName : body.userName,
-      })
-      const book = newbook.save();
-      res.status(200).json(new ApiResponse(200,book))
-      console.log(body)
-    } catch (error) {
-      next(error)
-    }
-  })
+  //     const newbook = new User({
+  //       userName : body.userName,
+  //     })
+  //     const book = newbook.save();
+  //     res.status(200).json(new ApiResponse(200,book))
+  //     console.log(body)
+  //   } catch (error) {
+  //     next(error)
+  //   }
+  // })
