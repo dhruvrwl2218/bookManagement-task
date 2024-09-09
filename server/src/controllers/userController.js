@@ -9,7 +9,7 @@ export const allUsers = asyncHandler(async(req,res,next)=>{
     if(!user){
         throw new ApiError(409,"no user are there");
     }
-    console.log(user)
+    
     return res.status(200).json(new ApiResponse(200,user,'all user fetched'));
     } catch (error) {
         next(error)

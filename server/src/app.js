@@ -14,10 +14,11 @@ app.use(cors({
 }))
 
 app.use(express.json())
-app.use(errorHandler);
+
 
 app.use('/api/v1/user',userRouter);
 app.use('/api/v1/books',bookRouter);
 app.use('/api/v1/transaction',transactionRouter);
 
+app.use(errorHandler);
 export {app}
