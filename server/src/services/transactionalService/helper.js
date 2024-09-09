@@ -14,7 +14,7 @@ export const validateUserAndBook = async (_id, bookName) => {
   if (!book) {
     throw new ApiError(409, "no book in db with this name");
   }
- 
+
   const userId = user._id.toString();
   const bookId = book._id.toString();
 
@@ -68,7 +68,7 @@ export const calculateDays = async (issueDate, returnDate) => {
 //it was used becoz task demanded otherwise we mostly deals with the _id's
 export const getBookId = async (bookName) => {
   const book = await Books.findOne({ bookName: bookName });
-  
+
   if (!book) {
     throw new ApiError(409, "No book is registred with this name");
   }
